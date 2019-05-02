@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>DomoMaker</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head>
+<body>
+  <nav>
+    <div class="navlink"><a href="/logout">Log out</a></div>
+  </nav>
+  <section id="domos">
+    <div class="domo">
+      {{#if tweeds}}
+        {{#each tweeds}}
+          <div class="domo">
+            <h3 class="domoName">{{this.name}}:</h3>
+            <h3 class="domoAge">{{this.tweed}}</h3>
+          </div>
+        {{/each}}
+      {{else}}
+        <h3 class="emptyDomo">No Tweeds yet</h3>
+      {{/if}}
+    </div>
+  </section>
+  <div id="domoMessage"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
+    <h3><span id="errorMessage"></span></h3><img id="domo" src="assets/img/domo.png" alt="domo"/>
+  </div>
+  <script src="/assets/bundle.js"></script>
+</body>
+</html>
